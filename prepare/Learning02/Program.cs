@@ -11,7 +11,7 @@ class Program
         //instantiates a new resume object
         Resume myResume = new Resume();
         //Iteration that allows you to add as many jobs as you want while bollean value is true
-        while (keepAdding == true){
+        while (keepAdding){
             //Instantiates a new job object
             Job job = new Job();
             Console.WriteLine("Enter company: ");
