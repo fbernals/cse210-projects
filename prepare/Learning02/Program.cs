@@ -5,38 +5,50 @@ class Program
 {
     static void Main(string[] args)
     {
+        //Initiates a reference variable to indicate if the iterative function will keep adding jobs
+        bool keepAdding = true;
         Console.WriteLine("Class and instance testing.");
-        Job job1 = new Job();
-        Console.WriteLine("Enter company: ");
-        job1._company = Console.ReadLine();
-        Console.WriteLine("Enter position: ");
-        job1._jobTitle = Console.ReadLine();
-        Console.WriteLine("Enter start year: ");
-        job1._startYear = int.Parse(Console.ReadLine());
-        Console.WriteLine("Enter end year: ");
-        job1._endYear = int.Parse(Console.ReadLine());
+        //instantiates a new resume object
+        Resume myResume = new Resume();
+        //Iteration that allows you to add as many jobs as you want while bollean value is true
+        while (keepAdding == true){
+            //Instantiates a new job object
+            Job job = new Job();
+            Console.WriteLine("Enter company: ");
+            job._company = Console.ReadLine();
+            Console.WriteLine("Enter position: ");
+            job._jobTitle = Console.ReadLine();
+            Console.WriteLine("Enter start year: ");
+            job._startYear = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter end year: ");
+            job._endYear = int.Parse(Console.ReadLine());
+            //Adds current job to the list
+            myResume._jobs.Add(job);
+            //Ask the user if he wants to keep adding jobs, if not, changes boolean to false.
+            Console.WriteLine("Add another job? (Y/N)");
+            string selection = Console.ReadLine().ToLower();
+            
+            if (selection == "n"){
+                keepAdding = false;
+            }
+            
+            
+            
+        }
+        
 
-        Job job2 = new Job();
-        Console.WriteLine("Enter company: ");
-        job2._company = Console.ReadLine();
-        Console.WriteLine("Enter position: ");
-        job2._jobTitle = Console.ReadLine();
-        Console.WriteLine("Enter start year: ");
-        job2._startYear = int.Parse(Console.ReadLine());
-        Console.WriteLine("Enter end year: ");
-        job2._endYear = int.Parse(Console.ReadLine());
-
+        
                 
         /*Console.WriteLine("This is the data you entered: ");
         Console.ForegroundColor = ConsoleColor.DarkYellow;
-        job1.Display();*/
+        job.Display();*/
         
-        Console.WriteLine("This is the resume test:");
-        Resume myResume = new Resume();
+        //Console.WriteLine("This is the resume test:");
+        
         Console.WriteLine("Enter your name:");
         myResume._name = Console.ReadLine();
-        myResume._jobs.Add(job1);
-        myResume._jobs.Add(job2);
+        //myResume._jobs.Add(job);
+        //myResume._jobs.Add(job2);
 
         Console.ForegroundColor = ConsoleColor.DarkYellow;
         Console.WriteLine($"{myResume._name}");
