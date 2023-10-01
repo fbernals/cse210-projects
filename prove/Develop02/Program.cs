@@ -2,6 +2,13 @@ class Program
 {
     static void Main(string[] args)
     {
+
+        Console.WriteLine("*********************************************");
+        Console.WriteLine("*             Fabian Bernal                 *");
+        Console.WriteLine("*                CSE210                     *");
+        Console.WriteLine("*                Week 4                     *");
+        Console.WriteLine("*********************************************");
+
         Journal journal = new Journal();
         Random random = new Random();
 
@@ -21,7 +28,7 @@ class Program
             {
                 case "1":
                     // Generate a random prompt/question
-                    string[] prompts = { "What did you learn today?", "Describe your feelings today.", "What are your goals for tomorrow?", "Did you meet anyone new today?", "What would you do different tomorrow?" };
+                    string[] prompts = {"Write the first thing that comes to your mind.", "What did you learn today?", "Describe your feelings today.", "What are your goals for tomorrow?", "Did you have a spiritual experience?", "What would you do different tomorrow?", "Free writing ticket! You may write anything that comes to your mind." };
                     string randomPrompt = prompts[random.Next(prompts.Length)];
 
                     Console.Write($"Prompt: {randomPrompt}\nEnter your response: ");
@@ -60,7 +67,7 @@ class Program
                 case "5":
                     Environment.Exit(0);
                     break;
-
+                
                 default:
                     Console.WriteLine("Invalid choice. Please enter a valid option (1-5).");
                     break;

@@ -33,15 +33,18 @@ class Journal
 
     public void LoadFromFile(string fileName)
     {
-        Entries.Clear(); // Clear existing entries before loading from file
+        Entries.Clear(); // Clears existing entries before loading from file
 
         using (StreamReader reader = File.OpenText(fileName))
         {
             //string line;
             while (!reader.EndOfStream)
             {
-                string line = reader.ReadLine();
-                Console.WriteLine(line);
+                string loadedInput = reader.ReadLine();
+                
+                //string line = reader.ReadLine();
+                //Entries = new List<JournalEntry>();
+                Console.WriteLine(loadedInput);
                 
             }
         }
