@@ -41,9 +41,6 @@ class Journal
             while (!reader.EndOfStream)
             {
                 string loadedInput = reader.ReadLine();
-                
-                //string line = reader.ReadLine();
-                //Entries = new List<JournalEntry>();
                 Console.WriteLine(loadedInput);
                 
             }

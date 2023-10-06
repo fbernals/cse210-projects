@@ -30,6 +30,7 @@ class Program
                     // Generate a random prompt/question
                     string[] prompts = {"Write the first thing that comes to your mind.", "What did you learn today?", "Describe your feelings today.", "What are your goals for tomorrow?", "Did you have a spiritual experience?", "What would you do different tomorrow?", "Free writing ticket! You may write anything that comes to your mind." };
                     string randomPrompt = prompts[random.Next(prompts.Length)];
+                
 
                     Console.Write($"Prompt: {randomPrompt}\nEnter your response: ");
                     string response = Console.ReadLine();
