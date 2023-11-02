@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
-        Console.WriteLine("My name is Fabian");
+        Spinner spinner = new Spinner();
+        spinner.GetSpinner();
     }
 }
