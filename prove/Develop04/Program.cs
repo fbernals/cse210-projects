@@ -7,7 +7,7 @@ class Program
     static void Main()
     {
         Console.Clear();
-        Console.WriteLine("Welcome to the Activity Program!");
+        Console.WriteLine("Welcome to the mindfulness activities program!");
         
         while (true)
         {
